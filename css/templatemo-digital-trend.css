@@ -35,7 +35,7 @@ https://templatemo.com/tm-538-digital-trend
     --secondary-color:      #f1c111;
     --white-color:          #ffffff;
     --dark-color:           #171819;
-    --project-bg:           #f0f8ff;
+    --project-bg:           #0c8195;
     --menu-bg:              #0c8195;
 
     --title-color:          #15141a;
@@ -163,6 +163,15 @@ https://templatemo.com/tm-538-digital-trend
     background: var(--dark-color);
     color: var(--white-color);
     border-color: transparent;
+  }
+
+  .bbsend {
+    transition-duration: 0.4s;
+  }
+  
+  .bbsend:hover {
+    background-color: #f1c111; /* Green */
+    color: white;
   }
 
 

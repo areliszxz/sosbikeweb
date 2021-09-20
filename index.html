@@ -3,6 +3,8 @@
 <head>
 
      <title>Sosbike</title>
+     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
      <meta name="description" content="">
@@ -10,14 +12,16 @@
      <meta name="author" content="">
      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/bootstrap.min.css"> 
      <link rel="stylesheet" href="css/font-awesome.min.css">
      <link rel="stylesheet" href="css/aos.css">
      <link rel="stylesheet" href="css/owl.carousel.min.css">
      <link rel="stylesheet" href="css/owl.theme.default.min.css">
 
+
      <!-- MAIN CSS -->
      <link rel="stylesheet" href="css/templatemo-digital-trend.css">
+     <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
 
 </head>
 <body>
@@ -26,8 +30,7 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-              <em><img src="images/icopng.png" height="50px" width="50px"> </em>
-              Sosbike
+              <img src="images/LsosB.png" height="90px" >
             </a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
@@ -47,7 +50,7 @@
                         <a href="https://www.facebook.com/groups/sosbike.com.mx" class="nav-link">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a href="contact.html" class="nav-link contact">Pre-registro</a>
+                        <a href="#contact" class="nav-link smoothScroll">Pre-registro</a>
                     </li>
                 </ul>
             </div>
@@ -63,9 +66,7 @@
                         <div class="col-lg-6 col-md-10 col-12 d-flex flex-column justify-content-center align-items-center">
                               <div class="hero-text">
                                 <h1 class="text-white" data-aos="fade-up">App de ciclistas para la prevencion de deslitos y un buen rodado</h1>
-                                <a href="contact.html" class="custom-btn btn-bg btn mt-3" data-aos="fade-up" data-aos-delay="100">Pre-registro</a>
-
-                                   <!--<strong class="d-block py-3 pl-5 text-white" data-aos="fade-up" data-aos-delay="200"><i class="fa fa-phone mr-2"></i> +99 080 070 4224</strong>-->
+                                <a href="#contact" class="custom-btn btn-bg btn mt-3" data-aos="fade-up" data-aos-delay="100">Pre-registro</a>
                               </div>
                         </div>
 
@@ -233,7 +234,70 @@
                </div>
           </div>
      </section>
+     <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
+     <!-- MENU BAR -->
+     <!-- CONTACT -->
+     <section class="contact section-padding" id="contact" style="background-color: #0c8195;">
+          <div class="container">
+               <div class="row">
+                    <div class="col-lg-6 mx-auto col-md-7 col-12 py-5 mt-5 text-center" data-aos="fade-up">
+                      <h2 class="mb-4">Gracias por tu interes. <strong>Realiza tu pre-registro, y se de los primeros en ser parte de la comunidad.</strong></h2>
+                      <!-- <p>o mandanos un correo a <a href="mailto:repubicimx@gmail.com">repubicimx@gmail.com</a></p> -->
+                    </div>
+                    <div class="col-lg-8 mx-auto col-md-10 col-12" >
+                    <!-- Follow https://templatemo.com/contact page to setup your own contact form -->
+                      <form id="cform" class="pageclip-form" data-aos="fade-up" data-aos-delay="300" role="form">
+                        <div class="row">
+                          <div class="col-lg-6 col-12">
+                            <input type="text" class="form-control" name="name" id="name" placeholder="Nombre">
+                          </div>
+                          <div class="col-lg-6 col-12">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+                          </div>
+                          <div class="col-lg-15 col-12" style="padding-top: 12px;">
+                            <textarea class="form-control" rows="6" name="message" id="message" placeholder="Mensaje"></textarea>
+                          </div>
+                         <div class=" col-lg-8 g-recaptcha" style="padding-top: 12px; padding-left: 30%;" data-sitekey="6Let830cAAAAAEcnCplwinR-z3NvAZtiR8UkXWfw">
+                         </div>
+                         <div class="col-lg-6 mx-auto col-7" style="padding-top: 12px;">
+                            <button type="button" class="form-control pageclip-form__submit bbsend" id="submit-button" name="submit"
+                            data-action='submit' data-callback='onSubmit' onclick="sendMessage()" >Enviar</button>
+                         </div>
+                        </div>
 
+                      </form>
+                    </div>
+
+               </div>
+          </div>
+     </section>
+    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".modalt">Small modal</button> -->
+
+      <div id="modalt" class="modal fade modalt"  tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+               <div class="modal-header" style="background-color: #0c8195;">
+                    <h10 class="modal-title" id="mySmallModalLabel"><strong>Enviado</strong></h10>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">×</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <span id="modalbtext"> Informacion enviada...</span>
+                  </div>
+            </div>
+          </div>
+        </div>
+<!-- How to change your own map point
+	1. Go to Google Maps
+	2. Click on your location point
+	3. Click "Share" and choose "Embed map" tab
+	4. Copy only URL and paste it within the src="" field below
+-->
+     <div class="google-map" data-aos="zoom-in">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7470.34450424332!2d-100.39494520302665!3d20.581022044700344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d344d6e7d0e9ed%3A0xf290c3d0b7cc36bd!2sCimatario%2C%2076030%20Santiago%20de%20Quer%C3%A9taro%2C%20Qro.!5e0!3m2!1ses!2smx!4v1619538008844!5m2!1ses!2smx" width="1920" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      <!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11196.961132529668!2d-43.38581128725845!3d-23.011063013218724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bdb695cd967b7%3A0x171cdd035a6a9d84!2sAv.%20L%C3%BAcio%20Costa%20-%20Barra%20da%20Tijuca%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%20Brazil!5e0!3m2!1sen!2sth!4v1568649412152!5m2!1sen!2sth" width="1920" height="600" frameborder="0" style="border:0;" allowfullscreen=""></iframe>-->
+     </div>
 
     <footer class="site-footer">
       <div class="container">
@@ -290,11 +354,14 @@
 
      <!-- SCRIPTS -->
      <script src="js/jquery.min.js"></script>
+     <script src="js/mondb.js"></script>
      <script src="js/bootstrap.min.js"></script>
      <script src="js/aos.js"></script>
      <script src="js/owl.carousel.min.js"></script>
      <script src="js/smoothscroll.js"></script>
      <script src="js/custom.js"></script>
+
+
 
 </body>
 </html>
